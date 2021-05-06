@@ -7,8 +7,10 @@ This fork can be dropped once PRs for the issue are merged.
 
 ## Installation
 Install under an npm alias to avoid having to code change due to the org scope:
+
+Noted that for a webpack based project I had to also install the package without the alias:
 ```
-npm i -S -E nativescript-google-maps-sdk@npm:@codesthings/nativescript-google-maps-sdk@3.2.1
+npm i -S -E @codesthings/nativescript-google-maps-sdk nativescript-google-maps-sdk@npm:@codesthings/nativescript-google-maps-sdk
 ```
 
 # NativeScript plugin for the Google Maps SDK

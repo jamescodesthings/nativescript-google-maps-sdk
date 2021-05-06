@@ -357,7 +357,7 @@ export class MapView extends MapViewBase {
 
     get ios(): any {
         try {
-          console.error('MapView.ios was called at', new Error('stack').stack)
+          // console.log('MapView.ios was called at', new Error('stack').stack)
           return this.nativeView;
         } catch (error) {
           console.error('Returning nativeView caused error', error);
