@@ -1,6 +1,6 @@
 {
-  "name": "nativescript-google-maps-sdk",
-  "version": "3.0.2",
+  "name": "@codesthings/nativescript-google-maps-sdk",
+  "version": "3.2.0",
   "description": "Google Maps SDK plugin for Nativescript",
   "main": "map-view",
   "typings": "map-view.d.ts",
@@ -29,7 +29,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/dapriett/nativescript-google-maps-sdk.git"
+    "url": "git+ssh://git@github.com:jamescodesthings/nativescript-google-maps-sdk.git"
   },
   "keywords": [
     "Nativescript",
@@ -39,6 +39,13 @@
     "SDK"
   ],
   "author": "Dan Prietti <dprietti@gmail.com> (https://github.com/dapriett)",
+  "contributors": [
+    {
+      "name" : "James Macmillan",
+      "email" : "jamescodesthings@gmail.com",
+      "url" : "https://github.com/jamescodesthings"
+    }
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/dapriett/nativescript-google-maps-sdk/issues"
