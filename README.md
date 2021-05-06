@@ -5,6 +5,12 @@ Forked due to this issue: https://github.com/dapriett/nativescript-google-maps-s
 
 This fork can be dropped once PRs for the issue are merged.
 
+## Installation
+Install under an npm alias to avoid having to code change due to the org scope:
+```
+npm i -S -E nativescript-google-maps-sdk@npm:@codesthings/nativescript-google-maps-sdk@3.2.1
+```
+
 # NativeScript plugin for the Google Maps SDK
 
 This is a cross-platform (iOS & Android) Nativescript plugin for the [Google Maps API](https://developers.google.com/maps/).
