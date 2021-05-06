@@ -1,5 +1,11 @@
-NativeScript plugin for the Google Maps SDK
-================
+# Fork
+
+This is a fork of https://github.com/dapriett/nativescript-google-maps-sdk/
+Forked due to this issue: https://github.com/dapriett/nativescript-google-maps-sdk/issues/444
+
+This fork can be dropped once PRs for the issue are merged.
+
+# NativeScript plugin for the Google Maps SDK
 
 This is a cross-platform (iOS & Android) Nativescript plugin for the [Google Maps API](https://developers.google.com/maps/).
 
@@ -44,7 +50,7 @@ Setup
 See demo code included [here](https://github.com/dapriett/nativescript-google-maps-sdk/tree/master/demo)
 
 See a live demo [here](https://tinyurl.com/m7ndp7u)
- 
+
 ## Configure API Key for Android
 
 ### Nativescript < 4
@@ -108,7 +114,7 @@ declare var GMSServices: any;
 
 ....
 
-if (platform.isIOS) { 
+if (platform.isIOS) {
     GMSServices.provideAPIKey("PUT_API_KEY_HERE");
 }
 ```
@@ -120,7 +126,7 @@ Modify your view by adding the `xmlns:maps="nativescript-google-maps-sdk"` names
 ```
 <!-- /app/main-page.xml -->
 
-<Page 
+<Page
     xmlns="http://www.nativescript.org/tns.xsd"
     xmlns:maps="nativescript-google-maps-sdk"
 >
@@ -129,16 +135,16 @@ Modify your view by adding the `xmlns:maps="nativescript-google-maps-sdk"` names
             latitude="{{ latitude }}"
             longitude="{{ longitude }}"
             zoom="{{ zoom }}"
-            bearing="{{ bearing }}" 
+            bearing="{{ bearing }}"
             tilt="{{ tilt }}"
             mapAnimationsEnabled="{{ mapAnimationsEnabled }}"
             padding="{{ padding }}"
-            mapReady="onMapReady"  
+            mapReady="onMapReady"
             markerSelect="onMarkerSelect"
             markerBeginDragging="onMarkerBeginDragging"
             markerEndDragging="onMarkerEndDragging"
             markerDrag="onMarkerDrag"
-            cameraChanged="onCameraChanged" 
+            cameraChanged="onCameraChanged"
             cameraMove="onCameraMove"
         />
     </GridLayout>
@@ -218,7 +224,7 @@ var mapsModule = require("nativescript-google-maps-sdk");
 
 function onMapReady(args) {
     var mapView = args.object;
-    
+
     console.log("Setting a marker...");
     var marker = new mapsModule.Marker();
     marker.position = mapsModule.Position.positionFromLatLng(-33.86, 151.20);
@@ -226,7 +232,7 @@ function onMapReady(args) {
     marker.snippet = "Australia";
     marker.userData = { index : 1};
     mapView.addMarker(marker);
-    
+
     // Disabling zoom gestures
     mapView.settings.zoomGesturesEnabled = false;
 }
@@ -236,7 +242,7 @@ function onMarkerSelect(args) {
 }
 
 function onCameraChanged(args) {
-    console.log("Camera changed: " + JSON.stringify(args.camera)); 
+    console.log("Camera changed: " + JSON.stringify(args.camera));
 }
 
 function onCameraMove(args) {
@@ -271,13 +277,13 @@ To use custom marker info windows, define a template in your view like so:
 
 ```
 <!-- /app/main-page.xml -->
-<Page 
+<Page
     xmlns="http://www.nativescript.org/tns.xsd"
     xmlns:maps="nativescript-google-maps-sdk"
 >
   <GridLayout>
        <maps:mapView mapReady="onMapReady">
-            <!-- Default Info Window Template -->       		
+            <!-- Default Info Window Template -->
             <maps:mapView.infoWindowTemplate>
                 <StackLayout orientation="vertical" width="200" height="150" >
                     <Label text="{{title}}" className="title" width="125"   />
@@ -286,7 +292,7 @@ To use custom marker info windows, define a template in your view like so:
                     <Label text="{{'LON: ' + position.longitude}}" className="infoWindowCoordinates"  />
                 </StackLayout>
             </maps:mapView.infoWindowTemplate>
-            <!-- Keyed Info Window Templates -->   
+            <!-- Keyed Info Window Templates -->
             <maps:mapView.infoWindowTemplates>
                 <template key="testWindow">
                     <StackLayout orientation="vertical" width="160" height="160" >
