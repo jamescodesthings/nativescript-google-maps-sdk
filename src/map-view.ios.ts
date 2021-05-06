@@ -214,7 +214,7 @@ class MapViewDelegateImpl extends NSObject implements GMSMapViewDelegate {
 
     public didTapMyLocationButtonForMapView(mapView: GMSMapView): boolean {
         const owner = this._owner.get();
-        
+
         if (owner) {
             owner.notifyMyLocationTapped();
             // Should return false in order to center the map on user position
@@ -356,7 +356,13 @@ export class MapView extends MapViewBase {
     }
 
     get ios(): any {
-        return this.nativeView;
+        try {
+          console.error('MapView.ios was called at', new Error('stack').stack)
+          return this.nativeView;
+        } catch (error) {
+          console.error('Returning nativeView caused error', error);
+          return null;
+        }
     }
 
     get gMap() {
